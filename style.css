@@ -30,7 +30,7 @@ main {
 }
 
 /* Left Side */
-#left-side {
+.left-side {
     padding: 50px 150px;
 }
 
@@ -78,6 +78,7 @@ input {
     border: 1px solid #dac7cb;
     padding: 15px;
     width: 384px;
+    background: transparent;
 }
 
 input:invalid {
@@ -123,8 +124,8 @@ button {
     padding: 15px;
     width: 90px;
     height: 45px;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: 45px;
     left: 340px;
     display: flex;
     justify-content: center;
@@ -149,15 +150,43 @@ button:hover {
 
 /* Responsiveness */
 @media screen and (max-width: 800px) {
-    #left-side {
+    .left-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 0;
     }
 
+    #logo {
+        padding: 50px;
+        margin-bottom: 0;
+        align-self: flex-start;
+        margin-left: 40px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
     #woman-image-mobile {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 100px;
+        
     }
 
     #woman-image-desktop {
         display: none;
+    }
+
+    form {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
     }
 }
