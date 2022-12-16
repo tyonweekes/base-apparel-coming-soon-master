@@ -20,16 +20,14 @@
         Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
-      <form name="emailForm" novalidate>
-        <div class="form-group">
-          <input type="email" name="email" id="email" placeholder="Email Address" required>
-          <span class="error" aria-live="polite"></span>
-          <span class="error-icon" aria-live="polite"></span>
-          <button>
+      <div class="container-form-input">
+          <input type="email" name="email" id="email" placeholder="Email Address">
+          <img class="img-error" src="./images/icon-error.svg" alt="error-icon">
+          <button class="form-button">
             <img src="./images/icon-arrow.svg" alt="submit-icon">
           </button>
-        </div>
-      </form>
+      </div>
+        <div class="error-message"></div>
     </section>
     <section class="right-side">
       <img src="./images/hero-desktop.jpg" alt="woman-image-desktop" id="woman-image-desktop">

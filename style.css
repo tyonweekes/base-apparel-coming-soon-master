@@ -66,11 +66,17 @@ p {
     width: 450px;
 }
 
-form {
+/* form {
     position: relative;
+} */
+
+.container-form-input {
+    display: flex;
+    justify-content: center;
 }
 
 input {
+    flex: 1;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     color: #dac7cb;
@@ -81,16 +87,32 @@ input {
     background: transparent;
 }
 
-input:invalid {
+/* input:invalid {
     border-color: var(--soft-red);
-}
+} */
 
-input:focus:invalid {
+/* input:focus:invalid {
     outline: none;
-}
+} */
 
 ::placeholder {
     color: #dac7cb;
+}
+
+.img-error {
+    position: relative;
+    /* left: 300px;
+    bottom: 35px; */
+    left: -50px;
+    display: none;
+}
+
+.error-message {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 10px 20px;
+    display: none;
+    color: var(--soft-red);
+    font-weight: 400;
 }
 
 .error {
@@ -125,8 +147,7 @@ button {
     width: 90px;
     height: 45px;
     position: relative;
-    bottom: 45px;
-    left: 340px;
+    left: -40px;
     display: flex;
     justify-content: center;
     align-items: center;

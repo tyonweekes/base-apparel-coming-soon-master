@@ -1,59 +1,21 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const inputEmail = document.querySelector('input#email');
-//     const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const formBtn = document.querySelector('.form-button');
+const emailInput = document.querySelector('#email');
 
-//     document.querySelector('form').addEventListener('submit', event => {
-//         if (!(regex.test(inputEmail.value))) {
-//             inputEmail.closest('.form-group').classList.add('err');
-//         }
-//     })
-// })
-
-const form = document.querySelector('form');
-const emailForm = document.querySelector('input');
-const emailError = document.querySelector('input + span.error');
-const errorIcon = document.querySelector('span.error-icon');
-const submitButton = document.querySelector('button');
-
-// Reset input if input is valid
-// emailForm.addEventListener('input', (event) => {
-//     if (emailForm.validity.valid) {
-//         emailError.textContent = '';
-//         emailError.className = 'error';
-//         errorIcon.innerHTML = '';
-//     } else {
-//         showError();
-//     }
-// });
-
-// Show error message if input is invalid
-form.addEventListener('submit', (event) => {
-    if (!emailForm.validity.valid) {
-        // showError();
-        validateEmail();
-        event.preventDefault();
+formBtn.addEventListener('click', e => {
+    if (emailInput.value < 1) {
+        document.querySelector('.container-form-input input').style.border = '1px solid hsl(0, 93%, 68%)';
+        document.querySelector('.img-error').style.display = 'flex';
+        document.querySelector('.error-message').style.display = 'flex';
+        document.querySelector('.error-message').innerHTML = 'The field cannot be empty.';
     }
-});
+    else {
+        let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-// Error message if input is blank
-function showError() {  
-    if (emailForm.validity.valueMissing) {
-        emailError.textContent = 'Please provide a valid email';
-        errorIcon.innerHTML = '<img src="./images/icon-error.svg" alt="error-icon">';
+        if (regex.test(emailInput.value.toLowerCase()) == false) {
+            document.querySelector('.container-form-input input').style.border = '1px solid hsl(0, 93%, 68%)';
+            document.querySelector('.img-error').style.display = 'flex';
+            document.querySelector('.error-message').style.display = 'flex';
+            document.querySelector('.error-message').innerHTML = 'Invalid email format.';
+        }
     }
-};
-
-// Error message if email format is incorrect
-function validateEmail(input) {
-    let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (input.value.match(validRegex)) {
-        alert('Valid email address!');
-        return true;
-    } else {
-        alert('Invalid email address!');
-        return false;
-    }
-};
-
-// Padding between input and error message
-emailError.className = 'error active';
+})
