@@ -66,25 +66,85 @@ p {
     width: 450px;
 }
 
-/* form {
+form {
     position: relative;
-} */
-
-.container-form-input {
-    display: flex;
-    justify-content: center;
+    display: block;
+    height: 50px;
+    width: 100%;
+    max-width: 400px;
 }
 
-input {
-    flex: 1;
+/* .container-form-input {
+    display: flex;
+    justify-content: center;
+} */
+
+.form input {
+    /* flex: 1; */
+    position: absolute;
+    outline: none;
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    color: #dac7cb;
-    border-radius: 25px;
-    border: 1px solid #dac7cb;
-    padding: 15px;
-    width: 384px;
-    background: transparent;
+    /* font-weight: 400; */
+    font-size: 1.1rem;
+    color: hsl(0, 6%, 24%);
+    /* border-radius: 25px; */
+    border-radius: 50px;
+    border: 1px solid hsl(0, 36%, 70%);
+    /* padding: 15px; */
+    padding-left: 30px;
+    /* width: 384px; */
+    width: 100%;
+    height: 100%;
+    /* background: transparent; */
+}
+
+.form button {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    cursor: pointer;
+    box-shadow: 0px 0px 18px 1px hsl(0, 20%, 80%);
+    transition: all 0.3s ease-in-out;
+}
+
+.form button:hover {
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 76%, 80%));
+    box-shadow: 0px 0px 13px 2px hsl(0, 20%, 78%);
+    transform: scale(1.1);
+}
+
+.form input::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-size: 0.9rem;
+}
+
+.form #icon-error {
+    display: inline-block;
+    position: absolute;
+    right: 27%;
+    top: 25%;
+    display: none;
+}
+
+.form #error-text {
+    position: absolute;
+    left: 30px;
+    top: 55px;
+    font-size: 1rem;
+    display: none;
+}
+
+.form #success-text {
+    position: absolute;
+    left: 30px;
+    top: 55px;
+    font-size: 1rem;
+    display: none;
 }
 
 /* input:invalid {
@@ -95,14 +155,14 @@ input {
     outline: none;
 } */
 
-::placeholder {
+/* ::placeholder {
     color: #dac7cb;
-}
+} */
 
-.img-error {
+/* .img-error {
     position: relative;
-    /* left: 300px;
-    bottom: 35px; */
+    left: 300px;
+    bottom: 35px;
     left: -50px;
     display: none;
 }
@@ -137,9 +197,9 @@ input {
     position: absolute;
     top: 10px;
     left: 300px;
-}
+} */
 
-button {
+/* button {
     background-image: var(--red-gradient);
     border-style: none;
     border-radius: 25px;
@@ -153,11 +213,11 @@ button {
     align-items: center;
     box-shadow: 0 10px 25px rgba(206, 151, 151, 0.7);
     cursor: pointer;
-}
+} */
 
-button:hover {
+/* button:hover {
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
-}
+} */
 
 /* Attribution */
 .attribution {

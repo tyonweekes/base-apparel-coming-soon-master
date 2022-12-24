@@ -20,14 +20,15 @@
         Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
-      <div class="container-form-input">
-          <input type="email" name="email" id="email" placeholder="Email Address">
-          <img class="img-error" src="./images/icon-error.svg" alt="error-icon">
-          <button class="form-button">
-            <img src="./images/icon-arrow.svg" alt="submit-icon">
+      <form class="form" action="#">
+          <input type="email" name="Email" id="input" id="Email" value="" placeholder="Email Address">
+          <img id="icon-error" src="./images/icon-error.svg" alt="icon-error">
+          <button id="button">
+            <img src="./images/icon-arrow.svg" alt="icon-arrow">
           </button>
-      </div>
-        <div class="error-message"></div>
+          <p id="error-text">Please provide a valid email</p>
+          <p id="success-text">Sent with success</p>
+        </form>
     </section>
     <section class="right-side">
       <img src="./images/hero-desktop.jpg" alt="woman-image-desktop" id="woman-image-desktop">
