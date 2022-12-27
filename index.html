@@ -12,7 +12,7 @@
 </head>
 <body>
   <main>
-    <section class="left-side">
+    <section id="left-side">
       <img src="./images/logo.svg" alt="base-apparel-logo" id="logo">
       <img src="./images/hero-mobile.jpg" alt="woman-image-mobile" id="woman-image-mobile">
       <h1><span>We're</span> coming soon</h1>
@@ -20,22 +20,20 @@
         Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
-      <form class="form" action="#">
-          <input type="email" name="Email" id="input" id="Email" value="" placeholder="Email Address">
-          <img id="icon-error" src="./images/icon-error.svg" alt="icon-error">
-          <button id="button">
+      <form id="email-form" action="#">
+          <input type="email" name="email" id="email-input" placeholder="Email Address">
+          <img src="./images/icon-error.svg" id="icon-error" alt="icon-error">
+          <button id="submit-button">
             <img src="./images/icon-arrow.svg" alt="icon-arrow">
           </button>
           <p id="error-text">Please provide a valid email</p>
           <p id="success-text">Sent with success</p>
         </form>
     </section>
-    <section class="right-side">
-      <img src="./images/hero-desktop.jpg" alt="woman-image-desktop" id="woman-image-desktop">
-    </section>
+    <img src="./images/hero-desktop.jpg" alt="woman-image-desktop" id="woman-image-desktop">
   </main>
   <footer>
-    <p class="attribution">
+    <p id="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://www.tyonweekes.com">Tyon Weekes</a>.
     </p>

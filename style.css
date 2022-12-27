@@ -30,7 +30,7 @@ main {
 }
 
 /* Left Side */
-.left-side {
+#left-side {
     padding: 50px 150px;
 }
 
@@ -74,31 +74,20 @@ form {
     max-width: 400px;
 }
 
-/* .container-form-input {
-    display: flex;
-    justify-content: center;
-} */
-
-.form input {
-    /* flex: 1; */
+#email-form input {
     position: absolute;
     outline: none;
     font-family: 'Josefin Sans', sans-serif;
-    /* font-weight: 400; */
     font-size: 1.1rem;
-    color: hsl(0, 6%, 24%);
-    /* border-radius: 25px; */
+    color: var(--dark-greyish-red);
     border-radius: 50px;
-    border: 1px solid hsl(0, 36%, 70%);
-    /* padding: 15px; */
+    border: 1px solid var(--desaturated-red);
     padding-left: 30px;
-    /* width: 384px; */
     width: 100%;
     height: 100%;
-    /* background: transparent; */
 }
 
-.form button {
+#email-form button {
     position: absolute;
     right: 0;
     width: 100px;
@@ -106,24 +95,24 @@ form {
     border-radius: 50px;
     border: none;
     outline: none;
-    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    background: var(--red-gradient);
     cursor: pointer;
     box-shadow: 0px 0px 18px 1px hsl(0, 20%, 80%);
     transition: all 0.3s ease-in-out;
 }
 
-.form button:hover {
+#email-form button:hover {
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 76%, 80%));
     box-shadow: 0px 0px 13px 2px hsl(0, 20%, 78%);
     transform: scale(1.1);
 }
 
-.form input::placeholder {
-    color: hsl(0, 36%, 70%);
+#email-form input::placeholder {
+    color: var(--desaturated-red);
     font-size: 0.9rem;
 }
 
-.form #icon-error {
+#email-form #icon-error {
     display: inline-block;
     position: absolute;
     right: 27%;
@@ -131,7 +120,7 @@ form {
     display: none;
 }
 
-.form #error-text {
+#email-form #error-text {
     position: absolute;
     left: 30px;
     top: 55px;
@@ -139,99 +128,27 @@ form {
     display: none;
 }
 
-.form #success-text {
+#email-form #success-text {
     position: absolute;
     left: 30px;
     top: 55px;
     font-size: 1rem;
     display: none;
 }
-
-/* input:invalid {
-    border-color: var(--soft-red);
-} */
-
-/* input:focus:invalid {
-    outline: none;
-} */
-
-/* ::placeholder {
-    color: #dac7cb;
-} */
-
-/* .img-error {
-    position: relative;
-    left: 300px;
-    bottom: 35px;
-    left: -50px;
-    display: none;
-}
-
-.error-message {
-    font-family: 'Josefin Sans', sans-serif;
-    padding: 10px 20px;
-    display: none;
-    color: var(--soft-red);
-    font-weight: 400;
-}
-
-.error {
-    width: 100%;
-    padding: 0;
-    font-size: 80%;
-    color: var(--soft-red);
-    box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 11px;
-}
-
-.error.active {
-    padding: 0.3em;
-}
-
-.error-icon {
-    position: absolute;
-    top: 10px;
-    left: 300px;
-} */
-
-/* button {
-    background-image: var(--red-gradient);
-    border-style: none;
-    border-radius: 25px;
-    padding: 15px;
-    width: 90px;
-    height: 45px;
-    position: relative;
-    left: -40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 25px rgba(206, 151, 151, 0.7);
-    cursor: pointer;
-} */
-
-/* button:hover {
-    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
-} */
 
 /* Attribution */
-.attribution {
+#attribution {
     font-size: 11px;
     text-align: center;
 }
 
-.attribution a {
+#attribution a {
     color: var(--dark-greyish-red);
 }
 
 /* Responsiveness */
 @media screen and (max-width: 800px) {
-    .left-side {
+    #left-side {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -242,7 +159,6 @@ form {
         padding: 50px;
         margin-bottom: 0;
         align-self: flex-start;
-        margin-left: 40px;
     }
 
     h1 {
@@ -254,6 +170,7 @@ form {
     }
 
     #woman-image-mobile {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
