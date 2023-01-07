@@ -51,8 +51,6 @@ With this project, I learned how to do custom form validation with JavaScript. B
 
 I would like to continue practicing JavaScript form validation so I get more comfortable with it.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
 ## Author
 
 - Website - [Tyon Weekes](https://www.tyonweekes.com)
